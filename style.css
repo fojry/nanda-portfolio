@@ -15,3 +15,41 @@
 .section-pad{max-width:none;width:100%;}
 /* Use CSS shapes for symbols that can be rendered as emoji on some systems. */
 .play-mark{display:inline-block;width:0;height:0;border-top:18px solid transparent;border-bottom:18px solid transparent;border-left:28px solid var(--yellow);vertical-align:middle;margin-top:10px}
+/* Consistent, emoji-free arrow icons across browsers and mobile devices. */
+.project-visual .card-arrow,
+.text-link > span,
+.contact-email > span,
+.social-links a > b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  line-height: 1;
+}
+.project-visual .card-arrow::after,
+.text-link > span::after,
+.contact-email > span::after,
+.social-links a > b::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(0deg);
+}
+.project-visual .card-arrow::before,
+.text-link > span::before,
+.contact-email > span::before,
+.social-links a > b::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-45deg);
+}
+.text-link > span,
+.contact-email > span,
+.social-links a > b { position: relative; }
