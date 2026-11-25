@@ -13,3 +13,5 @@
 .contact-location{margin-top:45px}
 /* Full-bleed sections: prevent black bars on wide screens */
 .section-pad{max-width:none;width:100%;}
+/* Use CSS shapes for symbols that can be rendered as emoji on some systems. */
+.play-mark{display:inline-block;width:0;height:0;border-top:18px solid transparent;border-bottom:18px solid transparent;border-left:28px solid var(--yellow);vertical-align:middle;margin-top:10px}
